@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>UXTools</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <base href="/">
+    <!-- Core Bootstrap CSS -->
+    <link rel="stylesheet" href="/assets/bower_components/bootstrap/dist/css/bootstrap.min.css">
+    <!-- Fonts -->
+    <link rel="stylesheet" href="/assets/bower_components/font-awesome/css/font-awesome.min.css">
+    <!-- Vendors CSS -->
+    <link rel="stylesheet" href="/assets/vendor/jquery-ui-bootstrap.css">
+    <!-- Summernote CSS -->
+    <link rel="stylesheet" href="/assets/bower_components/summernote/dist/summernote.css">
+    <!-- Toastr CSS -->
+    <link rel="stylesheet" href="/assets/bower_components/toastr/toastr.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/assets/app.css">
+    <!-- Polyfill(s) for older browsers -->
+    <script src="assets/node_modules/core-js/client/shim.min.js"></script>
+
+    <script src="assets/node_modules/zone.js/dist/zone.js"></script>
+    <script src="assets/node_modules/systemjs/dist/system.src.js"></script>
+
+    <script src="assets/systemjs.config.js"></script>
+    <script>
+      System.import('assets/app/main.js').catch(function(err){ console.error(err); });
+    </script>
+  </head>
+
+  <body>
+
+      {% include 'templates/partials/navigation.twig' %}
+
+      <div class="container-fluid js">
+            <ux-tools>
+                <div id="preloader"></div>
+            </ux-tools>
+      </div>
+      <!-- Core jQuery -->
+      <script type="text/javascript" src="/assets/bower_components/jquery/dist/jquery.min.js"></script>
+      <!-- Core jQuery UI -->
+      <script type="text/javascript" src="/assets/bower_components/jquery-ui/jquery-ui.min.js"></script>
+      <!-- Core Bootstrap JS -->
+      <script type="text/javascript" src="/assets/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+      <!-- Core Lodash JS -->
+      <script type="text/javascript" src="/assets/bower_components/lodash/dist/lodash.min.js"></script>
+      <!-- Summernote JS -->
+      <script type="text/javascript" src="/assets/bower_components/summernote/dist/summernote.min.js"></script>
+      <!-- Toastr JS -->
+      <script type="text/javascript" src="/assets/bower_components/toastr/toastr.min.js"></script>
+      <!-- Chart JS -->
+      <script type="text/javascript" src="/assets/bower_components/Chart.js/dist/Chart.min.js"></script>
+      <!-- App JS -->
+      <script src="/assets/app.js"></script>
+  </body>
+</html>

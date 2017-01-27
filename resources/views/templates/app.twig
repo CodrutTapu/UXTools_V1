@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>UXTools</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <base href="/">
+        <!-- Core Bootstrap CSS -->
+        <link rel="stylesheet" href="/assets/bower_components/bootstrap/dist/css/bootstrap.min.css">
+        <!-- Fonts -->
+        <link rel="stylesheet" href="/assets/bower_components/font-awesome/css/font-awesome.min.css">
+        <!-- Custom CSS -->
+        <link rel="stylesheet" href="/assets/app.css">
+
+    </head>
+    <body>
+
+        {% include 'templates/partials/navigation.twig' %}
+
+        <div class="container">
+
+            {% include 'templates/partials/flash.twig' %}
+
+            {% block content %}{% endblock %}
+
+        </div>
+
+        <!-- Core jQuery -->
+        <script type="text/javascript" src="/assets/bower_components/jquery/dist/jquery.min.js"></script>
+        <!-- Core jQuery UI -->
+        <script type="text/javascript" src="/assets/bower_components/jquery-ui/jquery-ui.min.js"></script>
+        <!-- Core Bootstrap JS -->
+        <script type="text/javascript" src="/assets/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+        <!-- Toastr JS -->
+        <script type="text/javascript" src="/assets/bower_components/toastr/toastr.min.js"></script>
+        <!-- App JS -->
+        <script src="/assets/app.js"></script>
+    </body>
+</html>
