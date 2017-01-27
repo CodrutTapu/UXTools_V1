@@ -1,0 +1,83 @@
+/*
+==================================
+    Tag Module
+==================================
+*/
+.tag-module {
+    padding: 10px;
+}
+.tag-module .tag {
+    float: left;
+    padding: 4px 25px;
+    margin: 5px;
+    background-color: #e3e5e6;
+    text-transform: capitalize;
+    position: relative;
+}
+.tag-module .note-editor.note-frame .note-editing-area .note-editable {
+    background: #e3e5e6;
+}
+.tag-module .tag .delete-tag {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 15px;
+    background: red;
+    color: #fff;
+    text-align: center;
+    cursor: pointer;
+    display: none;
+    height: 15px;
+    line-height: 15px;
+    font-size: 10px;
+}
+.tag-module .tag .tag-bg {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 15px;
+    background: #001926;
+    color: #fff;
+    text-align: center;
+    cursor: pointer;
+     display: none;
+    height: 15px;
+    line-height: 15px;
+    font-size: 10px;
+}
+div[class^="tag-bg-colors-list-"] {
+    display: none;
+    background: orange;
+    margin: 6px 0 0 2px;
+    position: absolute;
+    z-index: 999;
+    top: 25px;
+    left: -1px;
+    width: 125px;
+}
+div[class^="tag-bg-colors-list-"] .color-btn {
+    height: 25px;
+    width: 25px;
+    float: left;
+}
+div[class^="tag-bg-colors-list-"] .color-btn:hover {
+    cursor: pointer;
+}
+div[class^="tag-bg-colors-list-"] .color-picker {
+    width: 125px;
+    background: #fff;
+    border: 1px solid #001926;
+    padding: 7px 5px;
+}
+div[class^="tag-bg-colors-list-"] .color-picker .prefix {
+    font-weight: bold;
+    text-align: center;
+    margin: 5px 0;
+}
+div[class^="tag-bg-colors-list-"] .color-picker .text-box {
+    width: 70px;
+    border-radius: 0;
+    height: 20px;
+    font-size: 12px;
+    margin: 5px 0;
+}

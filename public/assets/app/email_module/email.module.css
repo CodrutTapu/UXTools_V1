@@ -1,0 +1,29 @@
+/*
+==================================
+    Email Module
+==================================
+*/
+.email-module {
+    padding: 10px;
+    text-align: center;
+}
+.email-module h1 {
+    padding: 0 5px;
+}
+.email-module input {
+    border-radius: 0;
+}
+.email-module button {
+    border-radius: 0;
+}
+.email-module .send-btn {
+    height: 34px;
+    background: #337ab7;
+    color: #fff;
+    cursor: text;
+    padding: 0 7px;
+    margin: 0;
+    font-weight: bold;
+    border: none;
+    padding: 7px 12px;
+}

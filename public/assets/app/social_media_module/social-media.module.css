@@ -1,0 +1,54 @@
+/*
+==================================
+    Social Media Module
+==================================
+*/
+.social-media-module {
+    padding: 10px;
+    text-align: center;
+}
+.social-media-module ul {
+    list-style-type: none;
+}
+.social-media-module ul li {
+    display: inline;
+}
+.social-media-module ul li a {
+    color: #333;
+}
+.social-media-module ul li .facebook:hover {
+    color: #3b5998;
+}
+.social-media-module ul li .twitter:hover {
+    color: #54ABEE;
+}
+.social-media-module ul li .linkedin:hover {
+    color: #0077B5;
+}
+.social-media-module ul li .external-link:hover {
+    color: #2bb673;
+}
+.social-media-module .edit-social-links {
+    background: #f4f4f4;
+    padding: 50px 0;
+    width: 100%;
+    display: none;
+}
+.social-media-module .edit-social-links-list  li {
+    width: 100%;
+    display: block;
+    text-align: left;
+    margin-bottom: 20px;
+}
+.social-media-module .edit-social-links-list  li input {
+    height: 34px;
+    border-radius: 0;
+    margin-left: 10px;
+    width: 70%;
+}
+.social-media-module .edit-social-links-list  li button {
+    height: 34px;
+    border-radius: 0;
+    width: 70%;
+    margin-left: 46px;
+}

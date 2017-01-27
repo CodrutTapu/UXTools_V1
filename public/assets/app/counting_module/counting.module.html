@@ -1,0 +1,12 @@
+<div class="counting-module white-brd hover-brd" [style.background]="module.bgColor"><!-- Counting Module -->
+    <div class="module-buttons">
+        <ul class="no-pad">
+            <li (click)="deleteCountingModule(gE,module)" class="delete" title="Delete Module"><i class="fa fa-trash fa-lg" aria-hidden="true"></i></li>
+            <bgColor-module [module]="module"></bgColor-module>
+            <li (click)="cloneModule(gE,module)" title="Clone Module"><i class="fa fa-clone" aria-hidden="true"></i></li>
+            <li class="move"><i class="fa fa-arrows" aria-hidden="true"></i></li>
+        </ul>
+    </div>
+    <p class="editable-counting-value cEditable" [innerHTML]="module.content[0]" (click)="updateCountingValue(module)"></p>
+    <p class="editable-counting-description cEditable" [innerHTML]="module.content[1]" (click)="updateCountingDescription(module)"></p>
+</div>

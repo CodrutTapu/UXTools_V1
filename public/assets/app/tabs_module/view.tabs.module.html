@@ -1,0 +1,13 @@
+<div class="tabs-module" [style.background]="module.bgColor"><!-- View Tabs Module -->
+    <div>
+      <!-- Nav tabs -->
+      <ul class="nav nav-tabs" role="tablist">
+        <li *ngFor="let item of module.items; let index = index" [class.active]="index == 0" role="presentation" class="tab-title"><a href="#{{item.id}}{{gE.id}}" aria-controls="home" role="tab" data-toggle="tab" [innerHTML]="item.title"></a>
+        </li>
+      </ul>
+      <!-- Tab panes -->
+      <div class="tab-content">
+        <div *ngFor="let item of module.items; let index = index" role="tabpanel" [class.active]="index == 0" class="tab-pane fade in cEditable" id="{{item.id}}{{gE.id}}" [innerHTML]="item.content"></div>
+      </div>
+    </div>
+</div>

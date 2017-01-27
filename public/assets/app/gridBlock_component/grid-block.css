@@ -1,0 +1,26 @@
+/*
+==================================
+    Grid Block Component
+==================================
+*/
+.add-module-modal {
+    cursor: default;
+}
+.add-module-modal .modal-header {
+    background: #001926;
+    color: #fff;
+    text-align: center;
+}
+.add-module-modal .modal-body {
+    text-align: center;
+    font-weight: bold;
+    color: #001926;
+}
+.add-module-modal .modal-body .row {
+    padding: 0 15px;
+}
+.add-module-modal .modal-body .module-icon:hover {
+    background: #001926;
+    color: #fff;
+    cursor: pointer;
+}

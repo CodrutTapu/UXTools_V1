@@ -1,0 +1,37 @@
+/*
+==================================
+    Pie Chart Module
+==================================
+*/
+.pie-chart-module {
+    padding: 10px;
+    position: relative;
+}
+.pie-chart-module input, .pie-chart-module .btn{
+    border-radius: 0;
+    margin-bottom: 10px;
+}
+.pie-chart-module .add-pie-segment, .pie-chart-module .remove-pie-segment  {
+    cursor: pointer;
+}
+.pie-chart-module .add-pie-segment:hover {
+    color: #5cb85c;
+}
+.pie-chart-module .remove-pie-segment {
+    color: #d9534f;
+}
+.pie-chart-module .create-pie-chart-box {
+    background: #f4f4f4;
+    padding: 0 20px;
+    width: 100%;
+    display: none;
+}
+.pie-chart-module .remove-pie-segment {
+    float: right;
+}
+.pie-chart-module .pie-labels-list p {
+    margin-top: 30px;
+}
+.pie-chart-module .pie-labels-list input {
+    margin-bottom: 0;
+}

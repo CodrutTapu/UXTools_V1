@@ -1,0 +1,9 @@
+<li title="Background Color" (click)="colorsListToggle()"><i class="fa fa-tint fa-lg" aria-hidden="true"></i></li>
+<div class="colors-list" (mouseleave)="colorsListToggle()">
+    <div class="color-btn" *ngFor="let bgC of bgColors" [style.background]="bgC" (click)="selectBgColor(module,bgC)"></div>
+    <div class="color-picker">
+        <span class="prefix">Hex:</span>
+        <input class="text-box form-control" type="text" name="name" value="#FFFFFF" [(ngModel)]="customBgColor" (keyup)="updateBgColor(module)" >
+        <span class="sample" [style.background]="customBgColor"></span>
+    </div>
+</div>

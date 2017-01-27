@@ -1,0 +1,17 @@
+<div class="image-module white-brd hover-brd"><!-- Image Module -->
+    <div class="module-buttons">
+        <ul class="no-pad">
+            <li class="add" title="Add Image"><i class="fa fa-plus fa-lg" aria-hidden="true"></i></li>
+            <li class="delete" (click)="deleteImageModule(gE,module)" title="Delete Module"><i class="fa fa-trash fa-lg" aria-hidden="true"></i></li>
+            <li (click)="cloneModule(gE,module)" title="Clone Module"><i class="fa fa-clone" aria-hidden="true"></i></li>
+            <li class="move"><i class="fa fa-arrows" aria-hidden="true"></i></li>
+        </ul>
+    </div>
+    <img src="{{module.url}}" alt="profile-image" id="image-result"/>
+    <div class="add-image">
+        <h2>Image Upload by URL</h2>
+        <input type="url" class="image-input-value" [(ngModel)]="imageUrl">
+        <button type="button" name="button" class="image-input-set-button btn btn-primary" (click)="changeImageUrl(module)">Upload</button>
+    </div>
+    <div class="image-module-item-delete" (click)="deleteImageUrl(module)" title="Delete Image"><i class="fa fa-times" aria-hidden="true"></i></div>
+</div>

@@ -1,0 +1,33 @@
+<div class="tabs-module white-brd hover-brd" [style.background]="module.bgColor"><!-- Tabs Module -->
+    <div class="module-buttons">
+        <ul class="no-pad">
+            <li class="add" (click)="addTabsItem(gE,module)" title="Add Item"><i class="fa fa-plus fa-lg" aria-hidden="true"></i></li>
+            <li class="delete" (click)="deleteTabsModule(gE,module)" title="Delete Module"><i class="fa fa-trash fa-lg" aria-hidden="true"></i></li>
+            <bgColor-module [module]="module"></bgColor-module>
+            <li (click)="cloneModule(gE,module)" title="Clone Module"><i class="fa fa-clone" aria-hidden="true"></i></li>
+            <li class="move"><i class="fa fa-arrows" aria-hidden="true"></i></li>
+        </ul>
+    </div>
+    <div>
+      <!-- Nav tabs -->
+      <ul class="nav nav-tabs" role="tablist">
+        <li *ngFor="let item of module.items; let index = index" [class.active]="index == 0" role="presentation" class="tab-title"><a href="#{{item.id}}{{gE.id}}" aria-controls="home" role="tab" data-toggle="tab" [innerHTML]="item.title"></a>
+            <div class="delete-tabs-item" (click)="deleteTabsItem(module,item)" title="Delete Item">
+                <i aria-hidden="true" class="fa fa-times"></i>
+            </div>
+        </li>
+      </ul>
+      <!-- Tab panes -->
+      <div class="tab-content">
+        <div *ngFor="let item of module.items; let index = index" role="tabpanel" [class.active]="index == 0" class="tab-pane fade in cEditable" id="{{item.id}}{{gE.id}}">
+            <form class="form-inline title-form">
+                <div class="form-group">
+                    <label>Title</label>
+                    <input type="text" class="form-control title-input" value="{{item.title}}" (focusout)="updateTabsItemTitle(item,$event)">
+                </div>
+            </form>
+            <div class="editable-tabs-item-content" [innerHTML]="item.content" (click)="updateTabsItemContent(item,module)"></div>
+        </div>
+      </div>
+    </div>
+</div>

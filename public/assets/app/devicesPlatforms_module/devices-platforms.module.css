@@ -1,0 +1,46 @@
+/*
+==================================
+    Devices and Platforms Module
+==================================
+*/
+.devices-platforms-module {
+    padding: 10px
+}
+.devices-platforms-module .devices-platforms-list .col-md-2 {
+    text-align: center;
+    position: relative;
+}
+.devices-platforms-module .devices-platforms-list .col-md-2:hover {
+    cursor: pointer;
+}
+.devices-platforms-module .devices-platforms-list .row {
+    margin: 0;
+}
+.devices-platforms-module .devices-platforms-list .item {
+    margin: 15px 0;
+    font-size: 24px;
+}
+.devices-platforms-modal .modal-header {
+    background: #001926;
+    color: #fff;
+    text-align: center;
+}
+.devices-platforms-modal .modal-body {
+    text-align: center;
+    font-weight: bold;
+}
+.devices-platforms-modal .modal-body .row {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+.devices-platforms-modal .modal-body .option-wrapper {
+    padding: 3px 15px;
+    margin: 2px 0;
+}
+.devices-platforms-modal .modal-body .option-wrapper:hover {
+    background: #f5f5f5;
+    cursor: pointer;
+}
+.devices-platforms-modal .modal-body .true {
+    background: #f5f5f5;
+}

@@ -1,0 +1,35 @@
+<div class="accordion-module white-brd hover-brd" [style.background]="module.bgColor"><!-- Accordion Module -->
+    <div class="module-buttons">
+        <ul class="no-pad">
+            <li class="add" (click)="addAccordionItem(gE,module)" title="Add Item"><i class="fa fa-plus fa-lg" aria-hidden="true"></i></li>
+            <li class="delete" (click)="deleteAccordionModule(gE,module)" title="Delete Module"><i class="fa fa-trash fa-lg" aria-hidden="true"></i></li>
+            <bgColor-module [module]="module"></bgColor-module>
+            <li (click)="cloneModule(gE,module)" title="Clone Module"><i class="fa fa-clone" aria-hidden="true"></i></li>
+            <li class="move"><i class="fa fa-arrows" aria-hidden="true"></i></li>
+        </ul>
+    </div>
+    <div class="editable-accordion-title cEditable" [innerHtml]="module.title" (click)="updateAccordionTitle(module)"></div>
+    <div class="panel-group" id="accordion{{gE.id}}" role="tablist" aria-multiselectable="true" *ngFor="let item of module.items; let index = index">
+        <div class="panel panel-default">
+            <div class="panel-heading" role="tab" id="heading{{item.id}}{{gE.id}}">
+                <h4 class="panel-title">
+                    <a class="collapsed expand" role="button" data-toggle="collapse"  href="#{{item.id}}{{gE.id}}" aria-expanded="false">{{item.title}}</a>
+                </h4>
+                <div class="delete-accordion-item" (click)="deleteAccordionItem(module,item)" title="Delete Item">
+                    <i aria-hidden="true" class="fa fa-times"></i>
+                </div>
+            </div>
+            <div id="{{item.id}}{{gE.id}}" class="panel-collapse collapse" [class.in]="index == 0" role="tabpanel">
+                <div class="panel-body">
+                    <form class="form-inline title-form">
+                        <div class="form-group">
+                            <label>Title</label>
+                            <input type="text" class="form-control title-input" value="{{item.title}}" (focusout)="updateAccordionItemTitle(item,$event)">
+                        </div>
+                    </form>
+                    <p class="editable-accordion-item-content cEditable" [innerHTML]="item.content" (click)="updateAccordionItemContent(item)"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

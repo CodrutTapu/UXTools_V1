@@ -1,0 +1,9 @@
+<li title="Color Scheme" (click)="schemeColorsListToggle()"><i class="fa fa-tint fa-lg" aria-hidden="true"></i></li>
+<div class="scheme-colors-list" (mouseleave)="schemeColorsListToggle()">
+    <div class="color-btn" *ngFor="let sC of schemeColors" [style.background]="sC" (click)="selectColorSchemeColor(sC)"></div>
+    <div class="color-picker">
+        <span class="prefix">Hex:</span>
+        <input class="text-box form-control" type="text" name="name" value="#FFFFFF" [(ngModel)]="customCsColor" (keyup)="updateCsColor()">
+        <span class="sample" [style.background]="customCsColor"></span>
+    </div>
+</div>

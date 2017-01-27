@@ -1,0 +1,11 @@
+<div class="bar-graph-module"  [style.background]="module.bgColor"><!-- View Bar Graph Module -->
+    <div class="editable-barGrpah-title cEditable" [innerHtml]="module.title"></div>
+    <div *ngFor="let bar of module.bars">
+        <div class="progress-wrapper clearfix">
+            <div class="editable-bar-label cEditable" [innerHtml]="bar.label"></div>
+            <div class="progress">
+                <div class="progress-bar" role="progressbar" aria-valuemin="0" aria-valuemax="100" [style.width]="bar.value+'%'" [style.background]="gE.csColor"></div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,5 @@
+<div class="tag-module clearfix" [style.background]="module.bgColor"><!-- View Tag Module -->
+    <div class="tag" *ngFor="let tag of module.tags"  [style.background]="tag.color">
+        <div class="editable-tag cEditable" [innerHTML]="tag.name" ></div>
+    </div>
+</div>

@@ -1,0 +1,44 @@
+/*
+==================================
+    Accordion Module
+==================================
+*/
+.accordion-module {
+    padding: 10px;
+}
+.accordion-module .panel-group {
+    margin-bottom: 2px;
+}
+.accordion-module .panel {
+    border-radius: 0;
+}
+.accordion-module .panel-heading {
+    position: relative;
+    background: #fff;
+}
+.accordion-module .delete-accordion-item {
+    position: absolute;
+    right: 0px;
+    top: 0;
+    height: 18px;
+    width: 18px;
+    background: red;
+    text-align: center;
+    line-height: 19px;
+    font-size: 12px;
+    color: #fff;
+    cursor: pointer;
+    display: none;
+}
+.accordion-module .expand {
+    color: #000;
+}
+.accordion-module .title-input {
+    height: 28px;
+}
+.accordion-module .title-form {
+    margin-bottom: 10px;
+}
+.accordion-module .tab-title {
+    margin: 5px 0;
+}

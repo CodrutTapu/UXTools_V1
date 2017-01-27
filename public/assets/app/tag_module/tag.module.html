@@ -1,0 +1,24 @@
+<div class="tag-module white-brd clearfix hover-brd" [style.background]="module.bgColor"><!-- Tag Module -->
+    <div class="module-buttons">
+        <ul class="no-pad">
+            <li class="add" (click)="addTag(gE,module)" title="Add Tag"><i class="fa fa-plus fa-lg" aria-hidden="true"></i></li>
+            <li class="delete" (click)="deleteTagModule(gE,module)" title="Delete Module"><i class="fa fa-trash fa-lg" aria-hidden="true"></i></li>
+            <bgColor-module [module]="module"></bgColor-module>
+            <li (click)="cloneModule(gE,module)" title="Clone Module"><i class="fa fa-clone" aria-hidden="true"></i></li>
+            <li class="move"><i class="fa fa-arrows" aria-hidden="true"></i></li>
+        </ul>
+    </div>
+    <div class="tag" *ngFor="let tag of module.tags"  [style.background]="tag.color">
+        <div class="editable-tag cEditable" [innerHTML]="tag.name" (click)="updateTag(tag)"></div>
+        <div class="delete-tag" (click)="deleteTag(module, tag)" title="Delete Tag"><i class="fa fa-times" aria-hidden="true"></i></div>
+        <div class="tag-bg" (click)="tagBgColorToggle(tag)" title="Change Tag Background"><i class="fa fa-tint" aria-hidden="true"></i></div>
+
+        <div class="tag-bg-colors-list-{{tag.id}}" (mouseleave)="tagBgColorToggle(tag)">
+            <div class="color-btn" *ngFor="let bgC of bgColors" [style.background]="bgC" (click)="selectTagBgColor(tag,bgC)"></div>
+            <div class="color-picker">
+                <span class="prefix">Hex:</span>
+                <input class="text-box form-control" type="text" name="name" value="#E3E5E6" [(ngModel)]="customTagBgColor" (keyup)="updateTagBgColor(tag)" >
+            </div>
+        </div>
+    </div>
+</div>

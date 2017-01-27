@@ -1,0 +1,23 @@
+<div class="bar-graph-module white-brd hover-brd"  [style.background]="module.bgColor"><!-- Bar Graph Module -->
+    <div class="module-buttons">
+        <ul class="no-pad">
+            <li class="add" (click)="addBarGraph(module)" title="Add Bar"><i class="fa fa-plus fa-lg" aria-hidden="true"></i></li>
+            <li class="delete" (click)="deleteBarGraphModule(gE,module)" title="Delete Module"><i class="fa fa-trash fa-lg" aria-hidden="true"></i></li>
+            <bgColor-module [module]="module"></bgColor-module>
+            <li (click)="cloneModule(gE,module)" title="Clone Module"><i class="fa fa-clone" aria-hidden="true"></i></li>
+            <li class="move"><i class="fa fa-arrows" aria-hidden="true"></i></li>
+        </ul>
+    </div>
+    <div class="editable-barGrpah-title cEditable" [innerHtml]="module.title" (click)="updateBarGraphTitle(module)"></div>
+    <div *ngFor="let bar of module.bars">
+        <div class="progress-wrapper clearfix">
+            <div class="editable-bar-label cEditable" [innerHtml]="bar.label" (click)="updateBarLabel(bar,module)"></div>
+            <div class="progress" (click)="adjustBarLength($event,bar)">
+                <div class="progress-bar" role="progressbar" aria-valuemin="0" aria-valuemax="100" [style.width]="bar.value+'%'" [style.background]="gE.csColor"></div>
+            </div>
+            <div class="delete-progress-bar" (click)="deleteBar(module,bar)" title="Delete Bar">
+                <i aria-hidden="true" class="fa fa-times"></i>
+            </div>
+        </div>
+    </div>
+</div>

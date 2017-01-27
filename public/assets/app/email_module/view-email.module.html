@@ -1,0 +1,12 @@
+<div class="email-module" [style.background]="gE.bgColor"><!-- View Email Module -->
+    <div class="editable-email-content cEditable" [innerHTML]="module.content"></div>
+    <form ngNoForm class="form-inline">
+        <div class="form-group">
+            <label for="Email" class="hidden">Name</label>
+            <input type="email" class="form-control" id="email" placeholder="you@yourmail.com" required [(ngModel)]="email">
+        </div>
+        <div class="form-group">
+            <button type="button" class="btn btn-primary send-btn" name="button" [style.background]="gE.csColor">Join Us!</button>
+        </div>
+    </form>
+</div>

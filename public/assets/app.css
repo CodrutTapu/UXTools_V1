@@ -1,0 +1,312 @@
+body {
+    padding-top: 80px;
+    padding-bottom: 40px;
+    position: relative;
+}
+/*
+==================================
+    Preloader
+==================================
+*/
+.js div#preloader {
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 999;
+    width: 100%;
+    height: 100%;
+    overflow: visible;
+    background: #333 url('http://files.mimoymima.com/images/loading.gif') no-repeat center center;
+}
+input[type=number]::-webkit-inner-spin-button, input[type=number]::-webkit-outer-spin-button {
+   opacity: 1;
+}
+/* TABLE OF CONTENTS
+
+
+*/
+/*
+==================================
+    Utility Classes
+==================================
+*/
+.white-brd {
+    border: 2px solid #F8F8F8;
+}
+.no-pad {
+    padding: 0;
+}
+.hover-brd:hover {
+    border: 2px solid #001926;
+}
+/*
+==================================
+    Module Buttons
+==================================
+*/
+.module-buttons {
+    margin-top: -36px;
+    position: absolute;
+}
+.module-buttons ul {
+    list-style-type: none;
+    margin-left: -12px;
+    width: 160px;
+    text-align: left;
+    display: none;
+}
+.module-buttons ul li {
+    display: inline;
+    background: #001926;
+    color: #fff;
+    padding: 7px;
+    cursor: pointer;
+}
+.module-buttons .move:hover {
+    cursor: move;
+}
+.module-buttons ul li:hover {
+    background: #333;
+}
+.text-module:hover .module-buttons ul{
+    display: block;
+}
+.text-module:hover .colours-list{
+    display: none;
+}
+.image-module:hover .module-buttons ul{
+    display: block;
+}
+.bar-graph-module:hover .module-buttons ul{
+    display: block;
+}
+.social-media-module:hover .module-buttons ul{
+    display: block;
+}
+.tag-module:hover .module-buttons ul{
+    display: block;
+}
+.email-module:hover .module-buttons ul{
+    display: block;
+}
+.scale-chart-module:hover .module-buttons ul{
+    display: block;
+}
+.pie-chart-module:hover .module-buttons ul{
+    display: block;
+}
+.accordion-module:hover .module-buttons ul {
+    display: block;
+}
+.tabs-module:hover .module-buttons ul {
+    display: block;
+}
+.embed-module:hover .module-buttons ul {
+    display: block;
+}
+.devices-platforms-module:hover .module-buttons ul {
+    display: block;
+}
+.about-module:hover .module-buttons ul {
+    display: block;
+}
+.counting-module:hover .module-buttons ul {
+    display: block;
+}
+/*
+==================================
+    Grid
+==================================
+*/
+.grid {
+    margin-top: 50px;
+    border: 1px dashed #001926;
+    min-height: 30px;
+    position: relative;
+}
+.grid-block {
+    margin: 10px 0;
+}
+.grid-block .grid-block-content {
+    background: #F8F8F8;
+    min-height: 45px;
+    border: 1px dashed #001926;
+    border-top: none;
+    padding: 35px 5px 2px 5px;
+}
+.grid-block .grid-block-control ul {
+    list-style-type: none;
+    margin: 0 5px 0 0;
+    padding: 0;
+}
+.grid-block-control .delete, .grid-block-control .add {
+    float: right;
+}
+.grid-block-control ul li {
+    display: inline;
+    padding: 0 5px;
+}
+.grid-block-control ul li:hover {
+    cursor: pointer;
+}
+.grid-block-control .minus {
+    background: #d9534f;
+    display: inline-block;
+    margin-right: -4px;
+}
+.grid-block-control .minus:hover {
+    background: #c9302c;
+}
+.grid-block-control .plus {
+    background: #5cb85c;
+    display: inline-block;
+}
+.grid-block-control .plus:hover {
+    background: #449d44;
+}
+.grid [class*="col-md"] {
+    padding: 0 5px;
+}
+.grid-block .grid-block-control {
+    background: #001926;
+    color: #fff;
+    height: 26px;
+    line-height: 26px;
+    z-index: 999;
+    cursor: move;
+}
+.dnd-drag-start {
+    -moz-transform:scale(0.8);
+    -webkit-transform:scale(0.8);
+    transform:scale(0.8);
+    opacity:0.7;
+}
+.dnd-drag-enter {
+    opacity:0.7;
+}
+.dnd-sortable-drag {
+  -moz-transform:scale(0.9);
+  -webkit-transform:scale(0.9);
+  transform:scale(0.9);
+  opacity:0.7;
+}
+.grid-control-menu ul {
+    list-style-type: none;
+    position: absolute;
+    top: -25px;
+    left: -1px;
+    width: 100px;
+}
+.grid-control-menu ul li {
+    display: inline;
+    background: #001926;
+    color: #fff;
+    padding: 7px;
+    cursor: pointer;
+}
+.grid-control-menu ul li:hover {
+    background: #333;
+}
+/*
+==================================
+    Buttons
+==================================
+*/
+.btn-custom-1 {
+    border-radius: 0;
+    color: #fff;
+    background: #074c70;
+    font-weight: bold;
+    transition: background .5s;
+}
+.btn-custom-1:hover {
+    color: #fff;
+    background: #001926;
+}
+/*
+==================================
+    Others
+==================================
+*/
+.note-all {
+    position: fixed;
+    top: 51px;
+    left: 0;
+    margin: 0 !important;
+    background: #001926;
+    padding: 10px;
+    width: 100%;
+    z-index: 999;
+}
+.note-btn {
+    border-radius: 0;
+}
+.note-editor.note-frame .note-statusbar .note-resizebar {
+    display:none;
+}
+.note-editor.note-frame {
+    border: none;
+}
+.note-editor.note-frame .note-editing-area .note-editable {
+    padding: 0;
+}
+.note-popover .popover-content, .panel-heading.note-toolbar {
+    padding: 0;
+}
+.main-content-wrapper {
+    margin-top: 120px;
+}
+.canvas-wrapper {
+    border: 2px dashed #001926;
+    padding: 40px 30px;
+}
+.note-popover .popover-content, .panel-heading.note-toolbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+.tag-module .tag p {
+    margin: 0;
+}
+.bar-graph-module .progress-wrapper p {
+    margin: 0;
+    cursor: text;
+    font-weight: bold;
+    font-size: 12px;
+}
+.scale-chart-module .slide-wrapper .slide-header .side-left p {
+    margin: 0;
+}
+.scale-chart-module .slide-wrapper .slide-header .side-right p {
+    margin: 0;
+}
+.accordion-module .panel-title p {
+    margin: 0;
+}
+.tabs-module .nav-tabs li a p {
+    margin: 8px 0 0 0;
+}
+.tabs-module .note-editable {
+    padding: 10px !important;
+}
+.counting-module .counting-value, .counting-module .editable-counting-value {
+    margin: 0;
+}
+.counting-module .counting-value .number {
+    font-size: 50px;
+}
+.counting-module .counting-value {
+    font-size: 30px;
+}
+.counting-module .counting-prefix, .counting-module .counting-sufix{
+    font-size: 30px;
+}
+.persona-action-buttons ul li {
+    padding: 5px 20px;
+}
+.persona-action-buttons ul li:hover{
+    cursor: pointer;
+    background: #f5f5f5;
+}
+
+​

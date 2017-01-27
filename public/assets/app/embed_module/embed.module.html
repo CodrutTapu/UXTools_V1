@@ -1,0 +1,19 @@
+<div class="embed-module white-brd hover-brd"><!-- Embed Module -->
+    <div class="module-buttons">
+        <ul class="no-pad">
+            <li class="add" title="Edit Link"><i class="fa fa-pencil-square-o fa-lg" aria-hidden="true"></i></li>
+            <li (click)="deleteEmbedModule(gE,module)" class="delete" title="Delete Module"><i class="fa fa-trash fa-lg" aria-hidden="true"></i></li>
+            <li (click)="cloneModule(gE,module)" title="Clone Module"><i class="fa fa-clone" aria-hidden="true"></i></li>
+            <li class="move"><i class="fa fa-arrows" aria-hidden="true"></i></li>
+        </ul>
+    </div>
+    <div class="editable-embed-title cEditable" [innerHTML]="module.title" (click)="updateEmbedTitle(module)"></div>
+    <div class="embed-responsive embed-responsive-16by9">
+      <iframe class="embed-responsive-item" [src]="url"></iframe>
+    </div>
+    <div class="add-embed">
+        <h2>Add URL</h2>
+        <input type="url" class="embed-input-value" [(ngModel)]="embedUrl">
+        <button type="button" name="button" class="embed-input-set-button btn btn-primary" (click)="changeEmbedUrl(module)">Add</button>
+    </div>
+</div>

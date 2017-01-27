@@ -1,0 +1,28 @@
+<div class="scale-chart-module white-brd hover-brd" [style.background]="module.bgColor"><!-- Scale Chart Module -->
+    <div class="module-buttons">
+        <ul class="no-pad">
+            <li class="add" (click)=addScale(module) title="Add Scale"><i class="fa fa-plus fa-lg" aria-hidden="true"></i></li>
+            <li class="delete" (click)="deleteScaleChartModule(gE,module)" title="Delete Module"><i class="fa fa-trash fa-lg" aria-hidden="true"></i></li>
+            <bgColor-module [module]="module"></bgColor-module>
+            <li (click)="cloneModule(gE,module)" title="Clone Module"><i class="fa fa-clone" aria-hidden="true"></i></li>
+            <li class="move"><i class="fa fa-arrows" aria-hidden="true"></i></li>
+        </ul>
+    </div>
+    <div class="editable-scale-title cEditable" [innerHTML]="module.title" (click)="updateScaleTitle(module)"></div>
+    <div *ngFor="let scale of module.scales">
+        <div class="slide-wrapper">
+            <div class="slide-header clearfix">
+                <div class="side-left">
+                    <p class="editable-sideA cEditable" (click)="updateScaleSideA(scale,module)" [innerHTML]="scale.sideA"></p>
+                </div>
+                <div class="side-right">
+                    <p class="editable-sideB cEditable" (click)="updateScaleSideB(scale,module)" [innerHTML]="scale.sideB"></p>
+                </div>
+            </div>
+            <input type="range" value="{{scale.value}}" (click)="updateScaleValue($event,scale)">
+            <div class="delete-slide" (click)=deleteScale(module,scale) title="Delete Scale">
+                <i class="fa fa-times" aria-hidden="true"></i>
+            </div>
+        </div>
+    </div>
+</div>

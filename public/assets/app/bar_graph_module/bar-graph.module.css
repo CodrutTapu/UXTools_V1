@@ -1,0 +1,48 @@
+/*
+==================================
+    Bar Graph Module
+==================================
+*/
+.bar-graph-module {
+    padding: 10px
+}
+.bar-graph-module .progress-wrapper {
+    position: relative;
+}
+.bar-graph-module .progress {
+    height: 18px;
+    border-radius: 0;
+}
+.bar-graph-module .progress:hover {
+    cursor: pointer;
+}
+.bar-graph-module .delete-progress-bar {
+    position: absolute;
+    right: 0px;
+    top: -1px;
+    height: 18px;
+    width: 18px;
+    background: red;
+    text-align: center;
+    line-height: 19px;
+    font-size: 12px;
+    color: #fff;
+    cursor: pointer;
+    display: none;
+}
+.bar-graph-module .progress-wrapper .side-left {
+    float: left;
+    margin: 0;
+    width: 50%;
+}
+.bar-graph-module .progress-wrapper .side-right {
+    float: right;
+    margin: 0;
+    width: 50%;
+    text-align: right;
+}
+.bar-graph-module .progress-wrapper .side-right input {
+    height: 18px;
+    width: 50px;
+    text-align: center;
+}

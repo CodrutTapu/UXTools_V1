@@ -1,0 +1,36 @@
+/*
+==================================
+    About Module
+==================================
+*/
+.about-module {
+    padding: 10px;
+    position: relative;
+}
+.about-item-name {
+    text-align: right;
+    font-weight: bold;
+    text-transform: uppercase;
+    position: relative;
+    padding: 0 15px;
+}
+.about-item-value {
+    text-align: left;
+    position: relative;
+    padding: 0 22px 0 15px;
+}
+.about-module-item-delete {
+    position: absolute;
+    right: 0;
+    width: 15px;
+    height: 15px;
+    text-align: center;
+    line-height: 15px;
+    color: red;
+    margin: 4px 2px 0 0;
+    cursor: pointer;
+}
+.view-about-module {
+    padding: 10px;
+    position: relative;
+}

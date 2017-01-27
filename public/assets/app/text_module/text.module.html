@@ -1,0 +1,11 @@
+<div class="text-module white-brd hover-brd" [style.background]="module.bgColor"><!-- Text Module -->
+    <div class="module-buttons">
+        <ul class="no-pad">
+            <li (click)="deleteTextModule(gE,module)" class="delete" title="Delete Module"><i class="fa fa-trash fa-lg" aria-hidden="true"></i></li>
+            <bgColor-module [module]="module"></bgColor-module>
+            <li (click)="cloneModule(gE,module)" title="Clone Module"><i class="fa fa-clone" aria-hidden="true"></i></li>
+            <li class="move"><i class="fa fa-arrows" aria-hidden="true"></i></li>
+        </ul>
+    </div>
+    <div class="editable-text-content" [innerHTML]="module.content" (click)="updateTextModule(openedTextEditors,module)"></div>
+</div>

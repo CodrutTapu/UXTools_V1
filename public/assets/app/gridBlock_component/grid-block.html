@@ -1,0 +1,140 @@
+<div class="container grid">
+    <div class="grid-control-menu">
+        <ul class="no-pad">
+            <colorScheme-module [gridElements]="gridElements"></colorScheme-module>
+        </ul>
+    </div>
+    <div class="row sortable" dnd-sortable-container [sortableData]="gridElements">
+        <div *ngFor="let gE of gridElements; let i = index" class="grid-block col-md-{{gE.dim}}" id="{{gE.id}}">
+            <div class="grid-block-control" dnd-sortable [sortableIndex]="i">
+                <ul>
+                    <li class="minus" (click)="minGridElem(gE)" title="Plus"><span class="glyphicon glyphicon-chevron-left"></span></li>
+                    <li class="plus" (click)="maxGridElem(gE)" title="Minus"><span class="glyphicon glyphicon-chevron-right"></span></li>
+                    <li class="dimension">{{gE.dim / 2}}/6</li>
+                    <li class="delete" (click)="deleteGridElem(gE)" title="Delete"><span class="glyphicon glyphicon-trash"></span></li>
+                    <div class="btn-group add">
+                        <li data-toggle="modal" [attr.data-target]="'#addModule' + gE.id" title="Add Module"><span class="glyphicon glyphicon-plus"></span></li>
+                        <div class="add-module-modal modal fade" id="addModule{{gE.id}}" tabindex="-1" role="dialog">
+                          <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                              <div class="modal-header">
+                                <h4 class="modal-title">Add Module</h4>
+                              </div>
+                              <div class="modal-body">
+                                  <div class="row">
+                                        <div class="col-md-3 module-icon" (click)="addTextModule(gE)">
+                                            <h3><span class="glyphicon glyphicon-text-width"></span></h3>
+                                            <p>Text</p>
+                                        </div>
+                                        <div class="col-md-3 module-icon" (click)="addImageModule(gE)">
+                                            <h3><span class="glyphicon glyphicon-picture"></span></h3>
+                                            <p>Image</p>
+                                        </div>
+                                        <div class="col-md-3 module-icon" (click)="addBarGraphModule(gE)">
+                                            <h3><i class="fa fa-bar-chart" aria-hidden="true"></i></h3>
+                                            <p>Bar Graph</p>
+                                        </div>
+                                        <div class="col-md-3 module-icon" (click)="addSocialMediaModule(gE)">
+                                            <h3><span class="glyphicon glyphicon-user"></span></h3>
+                                            <p>Social Media</p>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-3 module-icon" (click)="addTagModule(gE)">
+                                            <h3><i class="fa fa-tags" aria-hidden="true"></i></h3>
+                                            <p>Tags</p>
+                                        </div>
+                                        <div class="col-md-3 module-icon" (click)="addEmailModule(gE)">
+                                            <h3><span class="glyphicon glyphicon-envelope"></span></h3>
+                                            <p>Email</p>
+                                        </div>
+                                        <div class="col-md-3 module-icon" (click)="addScaleChartModule(gE)">
+                                            <h3><i class="fa fa-balance-scale" aria-hidden="true"></i></h3>
+                                            <p>Scale Chart</p>
+                                        </div>
+                                        <div class="col-md-3 module-icon" (click)="addPieChartModule(gE)">
+                                            <h3><i class="fa fa-pie-chart" aria-hidden="true"></i></h3>
+                                            <p>Pie Chart</p>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-3 module-icon" (click)="addAccordionModule(gE)">
+                                            <h3><span class="glyphicon glyphicon-menu-hamburger"></span></h3>
+                                            <p>Accordion</p>
+                                        </div>
+                                        <div class="col-md-3 module-icon" (click)="addTabsModule(gE)">
+                                            <h3><span class="glyphicon glyphicon-option-horizontal"></span></h3>
+                                            <p>Tabs</p>
+                                        </div>
+                                        <div class="col-md-3 module-icon" (click)="addEmbedModule(gE)">
+                                            <h3><i class="fa fa-code" aria-hidden="true"></i></h3>
+                                            <p>Embed</p>
+                                        </div>
+                                        <div class="col-md-3 module-icon" (click)="addDevicesPlatformsModule(gE)">
+                                            <h3><i class="fa fa-puzzle-piece" aria-hidden="true"></i></h3>
+                                            <p>Devices & Platforms</p>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-3 module-icon" (click)="addAboutModule(gE)">
+                                            <h3><i class="fa fa-th-list" aria-hidden="true"></i></h3>
+                                            <p>About</p>
+                                        </div>
+                                        <div class="col-md-3 module-icon dropdown-toggle" (click)="addSimpleCountingModule(gE)">
+                                            <h3><i class="fa fa-sort-numeric-asc" aria-hidden="true"></i></h3>
+                                            <p>Simple Counting</p>
+                                        </div>
+                                        <div class="col-md-3 module-icon dropdown-toggle" (click)="addSufixedCountingModule(gE)">
+                                            <h3><i class="fa fa-sort-numeric-asc" aria-hidden="true"></i></h3>
+                                            <p>Sufixed Counting</p>
+                                        </div>
+                                        <div class="col-md-3 module-icon dropdown-toggle" (click)="addIntervalCountingModule(gE)">
+                                            <h3><i class="fa fa-sort-numeric-asc" aria-hidden="true"></i></h3>
+                                            <p>Interval Counting</p>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-3 module-icon dropdown-toggle" (click)="addPrefixedCountingModule(gE)">
+                                            <h3><i class="fa fa-sort-numeric-asc" aria-hidden="true"></i></h3>
+                                            <p>Prefixed Counting</p>
+                                        </div>
+                                    </div>
+                                  </div>
+                              <div class="modal-footer">
+                                <button type="button" class="btn btn-custom-1" data-dismiss="modal">Close</button>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                    </div>
+                    <li class="clear" (click)="clearGridElement(gE)"><i class="fa fa-eraser" aria-hidden="true" title="Clear Grid Element"></i></li>
+                </ul>
+            </div>
+            <div [sortablejs]="gE.modules" [sortablejsOptions]="gE_modules_options" class="grid-block-content">
+                <div *ngFor="let module of gE.modules; let j = index">
+                    <div [ngSwitch]="module.id">
+                            <text-module class="module" *ngSwitchCase="1" [gE]="gE" [gridElements]="gridElements" [module]="module"></text-module>
+                            <image-module *ngSwitchCase="2" [gE]="gE" [gridElements]="gridElements" [module]="module"></image-module>
+                            <bar-graph-module *ngSwitchCase="3" [gE]="gE" [gridElements]="gridElements" [module]="module"></bar-graph-module>
+                            <social-media-module *ngSwitchCase="4" [gE]="gE" [gridElements]="gridElements" [module]="module"></social-media-module>
+                            <tag-module *ngSwitchCase="5" [gE]="gE" [gridElements]="gridElements" [module]="module"></tag-module>
+                            <email-module *ngSwitchCase="6" [gE]="gE" [gridElements]="gridElements" [module]="module"></email-module>
+                            <scale-chart-module *ngSwitchCase="7" [gE]="gE" [gridElements]="gridElements" [module]="module"></scale-chart-module>
+                            <pie-chart-module *ngSwitchCase="8" [gE]="gE" [gridElements]="gridElements" [module]="module"></pie-chart-module>
+                            <accordion-module *ngSwitchCase="9" [gE]="gE" [gridElements]="gridElements" [module]="module"></accordion-module>
+                            <tabs-module *ngSwitchCase="10" [gE]="gE" [gridElements]="gridElements" [module]="module"></tabs-module>
+                            <embed-module *ngSwitchCase="11" [gE]="gE" [gridElements]="gridElements" [module]="module"></embed-module>
+                            <devices-platforms-module *ngSwitchCase="12" [gE]="gE" [gridElements]="gridElements" [module]="module"></devices-platforms-module>
+                            <about-module *ngSwitchCase="13" [gE]="gE" [gridElements]="gridElements" [module]="module"></about-module>
+                            <counting-module *ngSwitchCase="14" [gE]="gE" [gridElements]="gridElements" [module]="module"></counting-module>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--<pre>
+        {{gridElements | json}}
+    </pre>-->
+
+</div>

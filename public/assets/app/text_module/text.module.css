@@ -1,0 +1,11 @@
+/*
+==================================
+    Text Module
+==================================
+*/
+.text-module {
+    padding: 10px;
+}
+.text-module p {
+    text-align: justify;
+}

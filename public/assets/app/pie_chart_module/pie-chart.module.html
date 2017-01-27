@@ -1,0 +1,38 @@
+<div class="pie-chart-module white-brd hover-brd" [style.background]="module.bgColor"><!-- Pie Chart Module -->
+    <div class="module-buttons">
+        <ul class="no-pad">
+            <li class="add" title="Edit Pie Chart"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></li>
+            <li class="delete" (click)="deletePieChartModule(gE,module)" title="Delete Module"><i class="fa fa-trash fa-lg" aria-hidden="true"></i></li>
+            <bgColor-module [module]="module"></bgColor-module>
+            <li (click)="cloneModule(gE,module)" title="Clone Module"><i class="fa fa-clone" aria-hidden="true"></i></li>
+            <li class="move"><i class="fa fa-arrows" aria-hidden="true"></i></li>
+        </ul>
+    </div>
+    <div class="create-pie-chart-box">
+        <div class="row">
+            <div class="col-md-12">
+                <h2><span (click)="addPieSegment(module)" class="add-pie-segment"><i class="fa fa-plus-circle" aria-hidden="true"></i> Add </span></h2>
+            </div>
+            <div class="col-md-6 pie-labels-list">
+                <h4>Labels</h4>
+                <p *ngFor="let lb of module.labels" >
+                    <input class="pie-label form-control" type="text" name="name" value="{{lb}}" (focusout)="lbUpdate($event,lb,module)" required min="0">
+                </p>
+            </div>
+            <div class="col-md-6 pie-data-list">
+                <h4>Data</h4>
+                <p *ngFor="let dt of module.data" >
+                    <span (click)="removePieSegment(module,dt)" class="remove-pie-segment"><i class="fa fa-minus-circle" aria-hidden="true"></i></span>
+                    <input class="pie-data form-control" type="number" name="name" value="{{dt}}" (focusout)="dtUpdate($event,dt,module)" required min="0" />
+                </p>
+            </div>
+            <div class="col-md-12">
+                <button class="create-pie-chart btn btn-primary" name="button" (click)="createNewPieChart(gE,module)">Create</button>
+            </div>
+        </div>
+    </div>
+    <div class="pie-chart-content{{module.pieId}}{{gE.id}}">
+        <div class="editable-pie-title cEditable" [innerHTML]="module.title" (click)="updatePieTitle(module)"></div>
+        <canvas id="pieChart{{module.pieId}}{{gE.id}}" width="400" height="400"></canvas>
+    </div>
+</div>

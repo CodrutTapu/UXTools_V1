@@ -1,0 +1,20 @@
+<div class="about-module white-brd hover-brd" [style.background]="module.bgColor"><!-- About Module -->
+    <div class="module-buttons">
+        <ul class="no-pad">
+            <li (click)="addAboutItem(module)" class="add" title="Add Item"><i class="fa fa-plus fa-lg" aria-hidden="true"></i></li>
+            <li (click)="deleteAboutModule(gE,module)" class="delete" title="Delete Module"><i class="fa fa-trash fa-lg" aria-hidden="true"></i></li>
+            <bgColor-module [module]="module"></bgColor-module>
+            <li (click)="cloneModule(gE,module)" title="Clone Module"><i class="fa fa-clone" aria-hidden="true"></i></li>
+            <li class="move"><i class="fa fa-arrows" aria-hidden="true"></i></li>
+        </ul>
+    </div>
+    <div class="row" *ngFor="let aI of module.content">
+        <div class="col-sm-6 about-item-name">
+            <p class="editable-about-item-name cEditable" [innerHTML]="aI.name" (click)="updateAboutItemName(aI,module)"></p>
+        </div>
+        <div class="col-sm-6 about-item-value">
+            <p class="editable-about-item-value cEditable" [innerHTML]="aI.value" (click)="updateAboutItemValue(aI,module)"></p>
+        </div>
+        <div class="about-module-item-delete" (click)="deleteAboutItem(module,aI)"><i class="fa fa-times" aria-hidden="true" title="Delete Item"></i></div>
+    </div>
+</div>

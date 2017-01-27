@@ -1,0 +1,20 @@
+<div class="email-module white-brd hover-brd" [style.background]="module.bgColor"><!-- Email Module -->
+    <div class="module-buttons">
+        <ul class="no-pad">
+            <li class="delete" (click)="deleteEmailModule(gE,module)"><i class="fa fa-trash fa-lg" aria-hidden="true" title="Delete Module"></i></li>
+            <bgColor-module [module]="module"></bgColor-module>
+            <li (click)="cloneModule(gE,module)" title="Clone Module"><i class="fa fa-clone" aria-hidden="true"></i></li>
+            <li class="move"><i class="fa fa-arrows" aria-hidden="true"></i></li>
+        </ul>
+    </div>
+    <div class="editable-email-content cEditable" [innerHTML]="module.content" (click)=updateEmailContent(module)></div>
+    <form ngNoForm class="form-inline">
+        <div class="form-group">
+            <label for="Email" class="hidden">Name</label>
+            <input type="email" class="form-control" id="email" placeholder="you@yourmail.com" required [(ngModel)]="email">
+        </div>
+        <div class="form-group">
+            <button type="button" class="btn btn-primary send-btn" name="button" (click)="updateEmail(module)" [style.background]="gE.csColor">Join Us!</button>
+        </div>
+    </form>
+</div>

@@ -1,0 +1,29 @@
+/*
+==================================
+    Embed Module
+==================================
+*/
+.embed-module {
+    padding: 10px;
+    position: relative;
+}
+.embed-module .add-embed {
+    height: 100%;
+    position: absolute;
+    padding: 50px 0 0 0;
+    text-align: center;
+    background: #f4f4f4;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: none;
+    z-index: 999;
+}
+.embed-module .add-embed input {
+    height: 34px;
+    border-radius: 0;
+}
+.embed-module .add-embed button {
+    height: 34px;
+    border-radius: 0;
+}

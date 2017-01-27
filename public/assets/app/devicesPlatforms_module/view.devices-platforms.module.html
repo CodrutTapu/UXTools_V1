@@ -1,0 +1,10 @@
+<div class="devices-platforms-module" [style.background]="module.bgColor"><!-- View Devices & Platforms Module -->
+    <div class="devices-platforms-list">
+        <h3>Devices & Platforms</h3>
+        <div class="row">
+            <div *ngFor="let dp of module.options" >
+                <div class="item col-md-2" *ngIf="dp.status == true" [innerHTML]="dp.content" data-toggle="tooltip" data-placement="bottom" title="{{dp.name}}" [style.color]="gE.csColor"></div>
+            </div>
+        </div>
+    </div>
+</div>
