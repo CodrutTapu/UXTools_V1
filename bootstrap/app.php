@@ -83,6 +83,10 @@
         return new \App\Controllers\Auth\PasswordController($container);
     };
 
+    $container['ShareController'] = function($container) {
+        return new \App\Controllers\ShareController($container);
+    };
+
     /*$container['csrf'] = function($container) {
          return new \Slim\Csrf\Guard;
     };*/

@@ -18,7 +18,7 @@ declare var toastr:any;
 
 export class newPersonaComponent {
 
-    project_name:any;
+    project_name:any = "Default";
 
     getData:Array<any> = [];
     gridElements:Array<gridElem> = [new gridElem(4,1,[new textModule(1,'text-module','<h1>Text Field 1</h1><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In pharetra felis in sem porta feugiat.</p>','#F8F8F8')],'#4c7ba0'),

@@ -4,6 +4,7 @@
     use App\Middleware\GuestMiddleware;
 
     $app->get('/','HomeController:home')->setName('home');
+    $app->get('/view/{author_id}/{project_type}/{project_id}/{project_name}','ShareController:shareProject');
 
     $app->group('', function () {
 
@@ -23,7 +24,7 @@
         $this->get('/auth/password/change','PasswordController:getChangePassword')->setName('auth.password.change');
         $this->post('/auth/password/change','PasswordController:postChangePassword');
 
-        $this->get('/dashboard', 'DashboardController:dashboard')->setName('dashboard');
+        //$this->get('/dashboard', 'DashboardController:dashboard')->setName('dashboard');
         $this->get('/dashboard/getProjects/{author_id}', 'DashboardController:getProjects');
         
         $this->get('/getCurrentUser', 'AuthController:getCurrentUser');

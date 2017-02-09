@@ -8,9 +8,9 @@
 
             $this->container->view->getEnvironment()->addGlobal('old', $_SESSION['old']);
 
-            if (isset($_SESSION['old'])){
+            //if (isset($_SESSION['old'])){
                 $_SESSION['old'] = $request->getParams();
-            }
+            //}
 
             $response =  $next($request,$response);
 

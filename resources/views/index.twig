@@ -33,11 +33,16 @@
 
       {% include 'templates/partials/navigation.twig' %}
 
-      <div class="container-fluid js">
+        <div class="container-fluid js">
             <ux-tools>
-                <div id="preloader"></div>
+                <!-- PRELOADER -->
+                <div id="preloader">
+                    <div class="inner">
+                        <span class="loader"></span>
+                    </div>
+                </div><!-- /PRELOADER -->
             </ux-tools>
-      </div>
+        </div>
       <!-- Core jQuery -->
       <script type="text/javascript" src="/assets/bower_components/jquery/dist/jquery.min.js"></script>
       <!-- Core jQuery UI -->
